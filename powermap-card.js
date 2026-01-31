@@ -47,7 +47,7 @@ class TemperatureHeatmapCard extends LitElement {
   }
 
   static getConfigElement() {
-    return document.createElement("temperature-heatmap-card-editor");
+    return document.createElement("powermap-card-editor");
   }
 
   static get styles() {
@@ -1796,7 +1796,7 @@ tempToRGB(temp) {
 
 }
 
-customElements.define("temperature-heatmap-card", TemperatureHeatmapCard);
+customElements.define("powermap-card", PowermapCard);
 
 
 export class TemperatureHeatmapCardEditor extends LitElement {
@@ -2069,11 +2069,11 @@ export class TemperatureHeatmapCardEditor extends LitElement {
     `;
 }
 
-customElements.define("temperature-heatmap-card-editor", TemperatureHeatmapCardEditor);
+customElements.define("powermap-card-editor", PowermapCardEditor);
 window.customCards = window.customCards || [];
 window.customCards.push({
-  type: "temperature-heatmap-card",
-  name: "Temperature Heatmap Card",
+  type: "powermap-card",
+  name: "Powermap Card",
   preview: false, // Optional - defaults to false
   description: "A cool temperature heatmap card!",
 });
